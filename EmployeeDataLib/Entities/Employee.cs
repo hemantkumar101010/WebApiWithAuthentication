@@ -10,7 +10,7 @@ namespace EmployeeDataLib.Entities
         [Key]
         public int EmpId { get; set; }
 
-        [Column(TypeName = "Varchar(50)") ]
+        [Column(TypeName = "Varchar(50)")]
         public string? EmpName { get; set; }
 
         [Column(TypeName = "char(10)")]
@@ -27,5 +27,15 @@ namespace EmployeeDataLib.Entities
         [Column(TypeName = "Varchar(20)")]
         public string? Password { get; set; }
 
+        [Required]
+        public RoleType Role { get; set; }
+
+    }
+
+    public enum RoleType
+    {
+        Admin = 1,
+        User,
+        SalesMan
     }
 }

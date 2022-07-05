@@ -15,13 +15,12 @@ namespace AuthProvider.Controllers
     {
         private readonly EmployeeDbContext _context;
         private readonly IConfiguration _configuration;
-     
+    
         public AuthController( IConfiguration configuration, EmployeeDbContext context)
         {
             _configuration = configuration;
             _context = context;
         }
-
         [HttpPost]
         public ActionResult LoginForEmployeeApi([FromBody] EmployeeApiModel empModel)
         {
@@ -30,7 +29,7 @@ namespace AuthProvider.Controllers
             {
                 return BadRequest();
             }
-            Employee emoloyee = new Employee();
+           // Employee emoloyee = new Employee();
             var employee = _context.Employees.Where(o => o.EmpEmail == empModel.EmpEmail && o.Password == empModel.Password).FirstOrDefault();
             if (employee != null)
             {
@@ -41,6 +40,12 @@ namespace AuthProvider.Controllers
                     new Claim(ClaimTypes.StreetAddress, empModel.EmpAddress),
                     new Claim(ClaimTypes.Email, empModel.EmpEmail),
                     new Claim("Password", empModel.Password),
+                    new Claim(ClaimTypes.Role, empModel.Role.ToString()),
+
+                    new Claim(ClaimTypes.DateOfBirth,DateTime.Now.AddYears(-25).ToString()),
+                   // new Claim("Qualification","BTech"),
+
+
                     new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
                 };
                 var token = CreateToken(authClaims, _configuration["JWT:EmpAudienceWebApi"], _configuration["JWT:Secret1"]);
@@ -49,7 +54,6 @@ namespace AuthProvider.Controllers
            }
             return Ok("Sorry!! input does not matches with the server, you cann't access api methods");
         }
-
         [HttpPost]
         public ActionResult LoginForWeatherApi([FromBody] EmployeeApiModel empModel)
         {
@@ -69,6 +73,8 @@ namespace AuthProvider.Controllers
                     new Claim(ClaimTypes.StreetAddress, empModel.EmpAddress),
                     new Claim(ClaimTypes.Email, empModel.EmpEmail),
                     new Claim("Password", empModel.Password),
+                    new Claim(ClaimTypes.Role, empModel.Role.ToString()),
+                    new Claim(ClaimTypes.DateOfBirth,DateTime.Now.AddYears(-25).ToString()),
                     new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
                 };
                 var token = CreateToken(authClaims, _configuration["JWT:WeatherForeCastAudienceWebAPI"], _configuration["JWT:Secret2"]);
@@ -77,7 +83,6 @@ namespace AuthProvider.Controllers
             }
             return Ok("Sorry!! input does not matches with the server, you cann't access api methods");
         }
-
         private string CreateToken(List<Claim> authClaims, string audience, string secretKey)
         {
             var authSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey));

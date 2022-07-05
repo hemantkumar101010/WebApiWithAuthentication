@@ -1,0 +1,7 @@
+﻿C:\Users\iamte\Desktop\.NetTrainingAssignmentRepo\WebApiWithAuthentication\EmployeeDataLib\EmployeeDbContext.cs
+C:\Users\iamte\Desktop\.NetTrainingAssignmentRepo\WebApiWithAuthentication\EmployeeDataLib\Entities\Employee.cs
+C:\Users\iamte\Desktop\.NetTrainingAssignmentRepo\WebApiWithAuthentication\EmployeeDataLib\Migrations\20220703154714_Initial-migration.cs
+C:\Users\iamte\Desktop\.NetTrainingAssignmentRepo\WebApiWithAuthentication\EmployeeDataLib\Migrations\20220703154714_Initial-migration.Designer.cs
+C:\Users\iamte\Desktop\.NetTrainingAssignmentRepo\WebApiWithAuthentication\EmployeeDataLib\Migrations\20220704160240_update-migration.cs
+C:\Users\iamte\Desktop\.NetTrainingAssignmentRepo\WebApiWithAuthentication\EmployeeDataLib\Migrations\20220704160240_update-migration.Designer.cs
+C:\Users\iamte\Desktop\.NetTrainingAssignmentRepo\WebApiWithAuthentication\EmployeeDataLib\Migrations\EmployeeDbContextModelSnapshot.cs

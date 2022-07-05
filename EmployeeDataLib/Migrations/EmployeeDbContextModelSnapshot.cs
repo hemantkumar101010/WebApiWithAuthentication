@@ -46,6 +46,9 @@ namespace EmployeeDataLib.Migrations
                         .IsRequired()
                         .HasColumnType("Varchar(20)");
 
+                    b.Property<int>("Role")
+                        .HasColumnType("int");
+
                     b.HasKey("EmpId");
 
                     b.ToTable("Employees");

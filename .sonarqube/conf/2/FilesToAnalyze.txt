@@ -1,0 +1,11 @@
+﻿C:\Users\iamte\Desktop\.NetTrainingAssignmentRepo\WebApiWithAuthentication\WeatherWebApi\Controllers\WeatherForecastController.cs
+C:\Users\iamte\Desktop\.NetTrainingAssignmentRepo\WebApiWithAuthentication\WeatherWebApi\Policies\CustomPolicy.cs
+C:\Users\iamte\Desktop\.NetTrainingAssignmentRepo\WebApiWithAuthentication\WeatherWebApi\Program.cs
+C:\Users\iamte\Desktop\.NetTrainingAssignmentRepo\WebApiWithAuthentication\WeatherWebApi\WeatherForecast.cs
+C:\Users\iamte\Desktop\.NetTrainingAssignmentRepo\WebApiWithAuthentication\WeatherWebApi\obj\Debug\net6.0\WeatherWebApi.GlobalUsings.g.cs
+C:\Users\iamte\Desktop\.NetTrainingAssignmentRepo\WebApiWithAuthentication\WeatherWebApi\obj\Debug\net6.0\.NETCoreApp,Version=v6.0.AssemblyAttributes.cs
+C:\Users\iamte\Desktop\.NetTrainingAssignmentRepo\WebApiWithAuthentication\WeatherWebApi\obj\Debug\net6.0\WeatherWebApi.AssemblyInfo.cs
+C:\Users\iamte\Desktop\.NetTrainingAssignmentRepo\WebApiWithAuthentication\WeatherWebApi\obj\Debug\net6.0\WeatherWebApi.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\iamte\Desktop\.NetTrainingAssignmentRepo\WebApiWithAuthentication\WeatherWebApi\appsettings.Development.json
+C:\Users\iamte\Desktop\.NetTrainingAssignmentRepo\WebApiWithAuthentication\WeatherWebApi\appsettings.json
+C:\Users\iamte\Desktop\.NetTrainingAssignmentRepo\WebApiWithAuthentication\WeatherWebApi\Properties\launchSettings.json

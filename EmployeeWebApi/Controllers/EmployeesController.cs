@@ -9,7 +9,7 @@ namespace EmployeeWebApi.Controllers
 
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+    //[Authorize]
     public class EmployeesController : ControllerBase
     {
         private readonly EmployeeDbContext _context;
@@ -22,7 +22,10 @@ namespace EmployeeWebApi.Controllers
         // GET: api/Employees
 
         [HttpGet]
-        [AllowAnonymous]
+        //authorise api using one role admin is alloewd to get all employees details
+        [Authorize(Roles ="Admin")]
+       // [Authorize(Roles = "Viewer")]
+
         public async Task<ActionResult<IEnumerable<Employee>>> GetEmployees()
         {
           if (_context.Employees == null)
@@ -34,6 +37,7 @@ namespace EmployeeWebApi.Controllers
 
         // GET: api/Employees/5
         [HttpGet("{id}")]
+        [Authorize(Roles = "Admin,Viewer")]
         public async Task<ActionResult<Employee>> GetEmployee(int id)
         {
           if (_context.Employees == null)
@@ -53,6 +57,7 @@ namespace EmployeeWebApi.Controllers
         // PUT: api/Employees/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
+        [Authorize(Roles = "Admin,Viewer")]
         public async Task<IActionResult> PutEmployee(int id, Employee employee)
         {
             if (id != employee.EmpId)
@@ -84,6 +89,7 @@ namespace EmployeeWebApi.Controllers
         // POST: api/Employees
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
+        [AllowAnonymous]
         public async Task<ActionResult<Employee>> PostEmployee(Employee employee)
         {
           if (_context.Employees == null)
@@ -97,7 +103,9 @@ namespace EmployeeWebApi.Controllers
         }
 
         // DELETE: api/Employees/5
+
         [HttpDelete("{id}")]
+        [Authorize(Roles ="Admin,Viewer")]
         public async Task<IActionResult> DeleteEmployee(int id)
         {
             if (_context.Employees == null)

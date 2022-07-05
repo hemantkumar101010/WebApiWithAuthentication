@@ -1,0 +1,10 @@
+﻿C:\Users\iamte\Desktop\.NetTrainingAssignmentRepo\WebApiWithAuthentication\AuthProvider\ApiModel\EmployeeApiModel.cs
+C:\Users\iamte\Desktop\.NetTrainingAssignmentRepo\WebApiWithAuthentication\AuthProvider\Controllers\AuthController.cs
+C:\Users\iamte\Desktop\.NetTrainingAssignmentRepo\WebApiWithAuthentication\AuthProvider\Program.cs
+C:\Users\iamte\Desktop\.NetTrainingAssignmentRepo\WebApiWithAuthentication\AuthProvider\obj\Debug\net6.0\AuthProvider.GlobalUsings.g.cs
+C:\Users\iamte\Desktop\.NetTrainingAssignmentRepo\WebApiWithAuthentication\AuthProvider\obj\Debug\net6.0\.NETCoreApp,Version=v6.0.AssemblyAttributes.cs
+C:\Users\iamte\Desktop\.NetTrainingAssignmentRepo\WebApiWithAuthentication\AuthProvider\obj\Debug\net6.0\AuthProvider.AssemblyInfo.cs
+C:\Users\iamte\Desktop\.NetTrainingAssignmentRepo\WebApiWithAuthentication\AuthProvider\obj\Debug\net6.0\AuthProvider.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\iamte\Desktop\.NetTrainingAssignmentRepo\WebApiWithAuthentication\AuthProvider\appsettings.Development.json
+C:\Users\iamte\Desktop\.NetTrainingAssignmentRepo\WebApiWithAuthentication\AuthProvider\appsettings.json
+C:\Users\iamte\Desktop\.NetTrainingAssignmentRepo\WebApiWithAuthentication\AuthProvider\Properties\launchSettings.json

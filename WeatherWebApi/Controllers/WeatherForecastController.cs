@@ -15,7 +15,17 @@ namespace WeatherWebApi.Controllers
             _logger = logger;
         }
 
+
+        //authorize for either admin or viewer only
+        //[Authorize(Roles ="Admin,Viewer")]
+
+        //multiple role auth.
+        // [Authorize(Roles = "Admin")]
+        //[Authorize(Roles = "Viewer")]
+
+        //policy : collection of claims(user's personal info )
         [HttpGet]
+        [Authorize(Policy="AgeOver18")]
         public List<WeatherForecast> GetWeather()
         {
             List<WeatherForecast> weatherList = new List<WeatherForecast>();
@@ -30,7 +40,8 @@ namespace WeatherWebApi.Controllers
         }
 
         [HttpGet]
-        [AllowAnonymous]
+        [Authorize(Policy = "RequiredMultipleRole")]
+       // [AllowAnonymous]
         public ActionResult Hello()
         {
             return Ok("Welcome to weather forecast app.");

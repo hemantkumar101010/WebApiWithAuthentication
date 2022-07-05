@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EmployeeDataLib.Migrations
 {
     [DbContext(typeof(EmployeeDbContext))]
-    [Migration("20220703160901_update-migration")]
+    [Migration("20220704160240_update-migration")]
     partial class updatemigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -47,6 +47,9 @@ namespace EmployeeDataLib.Migrations
                     b.Property<string>("Password")
                         .IsRequired()
                         .HasColumnType("Varchar(20)");
+
+                    b.Property<int>("Role")
+                        .HasColumnType("int");
 
                     b.HasKey("EmpId");
 
